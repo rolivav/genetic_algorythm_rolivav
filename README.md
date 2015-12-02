@@ -1,2 +1,2 @@
-# genetic_algorythm_rolivav 
-Genetic algorythm for mspacman. Work for university.
+# mspacman-gen-alg
+Genetic Algorythm practice for university

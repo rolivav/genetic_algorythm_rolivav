@@ -17,7 +17,7 @@ public final class RandomGhosts extends Controller<EnumMap<GHOST,MOVE>>
 	private Random rnd=new Random();
 	
 	/* (non-Javadoc)
-	 * @see pacman.controllers.Controller#getMove(pacman.game.Game, long)
+	 * @see danger.controllers.Controller#getMove(danger.game.Game, long)
 	 */
 	public EnumMap<GHOST,MOVE> getMove(Game game,long timeDue)
 	{	

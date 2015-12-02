@@ -12,7 +12,7 @@ public class NearestPillPacMan extends Controller<MOVE>
 {	
 	
 	/* (non-Javadoc)
-	 * @see pacman.controllers.Controller#getMove(pacman.game.Game, long)
+	 * @see danger.controllers.Controller#getMove(danger.game.Game, long)
 	 */
 	public MOVE getMove(Game game,long timeDue)
 	{		

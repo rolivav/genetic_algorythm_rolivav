@@ -20,7 +20,7 @@ public final class AggressiveGhosts extends Controller<EnumMap<GHOST,MOVE>>
 	private MOVE[] moves=MOVE.values();
 		
 	/* (non-Javadoc)
-	 * @see pacman.controllers.Controller#getMove(pacman.game.Game, long)
+	 * @see danger.controllers.Controller#getMove(danger.game.Game, long)
 	 */
 	public EnumMap<GHOST,MOVE> getMove(Game game,long timeDue)
 	{		

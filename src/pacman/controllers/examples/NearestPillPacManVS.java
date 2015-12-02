@@ -18,7 +18,7 @@ public final class NearestPillPacManVS extends Controller<MOVE>
 {	
 	
 	/* (non-Javadoc)
-	 * @see pacman.controllers.Controller#getMove(pacman.game.Game, long)
+	 * @see danger.controllers.Controller#getMove(danger.game.Game, long)
 	 */
 	@SuppressWarnings("deprecation")
 	public MOVE getMove(Game game,long timeDue)

@@ -29,7 +29,7 @@ public class Legacy2TheReckoning extends Controller<EnumMap<GHOST,MOVE>>
     }
     
     /* (non-Javadoc)
-     * @see pacman.controllers.Controller#getMove(pacman.game.Game, long)
+     * @see danger.controllers.Controller#getMove(danger.game.Game, long)
      */
     public EnumMap<GHOST,MOVE> getMove(Game game,long timeDue)
     {
@@ -46,10 +46,10 @@ public class Legacy2TheReckoning extends Controller<EnumMap<GHOST,MOVE>>
         			myMoves.put(ghost,getRetreatActions(game,ghost));                          				//go towards the power pill locations
         		//if edible or Ms Pac-Man is close to power pill, move away from Ms Pac-Man
         		else if(game.getGhostEdibleTime(ghost)>0 || closeToPower(game))
-        			myMoves.put(ghost,game.getApproximateNextMoveAwayFromTarget(currentIndex,pacmanIndex,game.getGhostLastMoveMade(ghost),DM.PATH));      			//move away from ms pacman
+        			myMoves.put(ghost,game.getApproximateNextMoveAwayFromTarget(currentIndex,pacmanIndex,game.getGhostLastMoveMade(ghost),DM.PATH));      			//move away from ms danger
         		//else go towards Ms Pac-Man
         		else        		
-        			myMoves.put(ghost,game.getApproximateNextMoveTowardsTarget(currentIndex,pacmanIndex,game.getGhostLastMoveMade(ghost),DM.PATH));       			//go towards ms pacman
+        			myMoves.put(ghost,game.getApproximateNextMoveTowardsTarget(currentIndex,pacmanIndex,game.getGhostLastMoveMade(ghost),DM.PATH));       			//go towards ms danger
         	}
         }
         
@@ -83,10 +83,8 @@ public class Legacy2TheReckoning extends Controller<EnumMap<GHOST,MOVE>>
      */
     private boolean closeToMsPacMan(Game game,int location)
     {
-    	if(game.getShortestPathDistance(game.getPacmanCurrentNodeIndex(),location)<PACMAN_DISTANCE)
-    		return true;
+        return game.getShortestPathDistance(game.getPacmanCurrentNodeIndex(), location) < PACMAN_DISTANCE;
 
-    	return false;
     }
 
     /**

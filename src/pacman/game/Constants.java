@@ -18,15 +18,20 @@ public final class Constants
 	 */
 	public enum MOVE 
 	{
-		UP 		{ public MOVE opposite(){return MOVE.DOWN;		};},	
-		RIGHT 	{ public MOVE opposite(){return MOVE.LEFT;		};}, 	
-		DOWN 	{ public MOVE opposite(){return MOVE.UP;		};},		
-		LEFT 	{ public MOVE opposite(){return MOVE.RIGHT;		};}, 	
-		NEUTRAL	{ public MOVE opposite(){return MOVE.NEUTRAL;	};};	
+		UP 		{ public MOVE opposite(){return MOVE.DOWN;		}
+		},
+		RIGHT 	{ public MOVE opposite(){return MOVE.LEFT;		}
+		},
+		DOWN 	{ public MOVE opposite(){return MOVE.UP;		}
+		},
+		LEFT 	{ public MOVE opposite(){return MOVE.RIGHT;		}
+		},
+		NEUTRAL	{ public MOVE opposite(){return MOVE.NEUTRAL;	}
+		};
 		
 		public abstract MOVE opposite();
-	};
-	
+	}
+
 	/**
 	 * Enumeration for the ghosts. The integer arguments are the initial lair times.
 	 */
@@ -43,8 +48,8 @@ public final class Constants
 		{
 			this.initialLairTime=lairTime;
 		}
-	};
-	
+	}
+
 	/**
 	 * DM stands for Distance Metric, a simple enumeration for use with methods that 
 	 * require a distance metric. The metric available are as follows:
@@ -52,8 +57,8 @@ public final class Constants
 	 * EUCLID: Euclidean distance using the nodes' x and y coordinates
 	 * MANHATTAN: Manhattan distance (absolute distance between x and y coordinates)
 	 */
-	public enum DM {PATH, EUCLID, MANHATTAN};
-	
+	public enum DM {PATH, EUCLID, MANHATTAN}
+
 	public static final int PILL=10;						//points for a normal pill
 	public static final int POWER_PILL=50;					//points for a power pill
 	public static final int GHOST_EAT_SCORE=200;			//score for the first ghost eaten (doubles every time for the duration of a single power pill)

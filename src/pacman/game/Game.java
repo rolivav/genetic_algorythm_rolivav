@@ -47,8 +47,8 @@ public final class Game
 	private EnumMap<GHOST, Ghost> ghosts;
 
 	//mazes are only loaded once since they don't change over time
-	private static Maze[] mazes=new Maze[NUM_MAZES];;
-	
+	private static Maze[] mazes=new Maze[NUM_MAZES];
+
 	private Maze currentMaze;
 	
 	static 
@@ -1294,7 +1294,7 @@ public final class Game
 	 */
 	public int getManhattanDistance(int fromNodeIndex,int toNodeIndex)
 	{
-		return (int)(Math.abs(currentMaze.graph[fromNodeIndex].x-currentMaze.graph[toNodeIndex].x)+Math.abs(currentMaze.graph[fromNodeIndex].y-currentMaze.graph[toNodeIndex].y));
+		return Math.abs(currentMaze.graph[fromNodeIndex].x-currentMaze.graph[toNodeIndex].x)+Math.abs(currentMaze.graph[fromNodeIndex].y-currentMaze.graph[toNodeIndex].y);
 	}
 	
 	/**

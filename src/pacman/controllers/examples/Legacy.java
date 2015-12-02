@@ -17,7 +17,7 @@ public class Legacy extends Controller<EnumMap<GHOST,MOVE>>
 	MOVE[] moves=MOVE.values();
 	
 	/* (non-Javadoc)
-	 * @see pacman.controllers.Controller#getMove(pacman.game.Game, long)
+	 * @see danger.controllers.Controller#getMove(danger.game.Game, long)
  	*/
 	public EnumMap<GHOST,MOVE> getMove(Game game,long timeDue)
 	{
